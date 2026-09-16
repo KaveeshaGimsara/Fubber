@@ -3,6 +3,7 @@ import { store } from "@/lib/db";
 import { getPublisher } from "@/lib/social/registry";
 import { PlatformType, PostStatus } from "@/lib/db/types";
 import { PublishResult } from "@/lib/social/types";
+import { runMediaCleanup } from "@/lib/media/cleanup";
 
 export async function GET(req: NextRequest) {
   try {
@@ -91,10 +92,14 @@ export async function GET(req: NextRequest) {
       });
     }
 
+    // Proactively purge media assets older than 1 hour to protect storage limits
+    const cleanupResult = await runMediaCleanup();
+
     return NextResponse.json({
       success: true,
       processedCount: duePosts.length,
       dispatched: executionSummary,
+      cleanup: cleanupResult,
       checkedAt: new Date().toISOString(),
     });
   } catch (error: any) {

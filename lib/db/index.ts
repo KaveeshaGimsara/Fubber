@@ -139,6 +139,15 @@ class InMemoryDatabase {
     if (accountId) return this.pages.filter((p) => p.accountId === accountId);
     return this.pages;
   }
+  addPage(page: SocialPage) {
+    const existing = this.pages.find((p) => p.pageId === page.pageId);
+    if (existing) {
+      Object.assign(existing, page);
+      return existing;
+    }
+    this.pages.push(page);
+    return page;
+  }
   selectPage(pageId: string) {
     this.pages.forEach((p) => {
       p.isSelected = p.pageId === pageId;
