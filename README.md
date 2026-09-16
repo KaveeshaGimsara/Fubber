@@ -6,12 +6,12 @@
   **The Ultimate Free & Open-Source Social Media Publishing Dashboard**
 
   <p align="center">
-    <a href="https://vercel.com/new/clone?repository-url=https://github.com/your-username/fubber"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+    <a href="https://vercel.com/new/clone?repository-url=https://github.com/KaveeshaGimsara/fubber"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
   </p>
 
   <p align="center">
-    <a href="https://github.com/sponsors/your-username"><img src="https://img.shields.io/badge/Sponsor-GitHub-%23EA4AAA?style=for-the-badge&logo=github&logoColor=white" alt="Sponsor on GitHub"></a>
-    <a href="https://ko-fi.com/your-username"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"></a>
+    <a href="https://github.com/sponsors/KaveeshaGimsara"><img src="https://img.shields.io/badge/Sponsor-GitHub-%23EA4AAA?style=for-the-badge&logo=github&logoColor=white" alt="Sponsor on GitHub"></a>
+    <a href="https://ko-fi.com/vgmoo_creators"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"></a>
   </p>
 </div>
 
@@ -26,7 +26,7 @@
 5. **Pinterest** 
 6. **YouTube Community Posts**
 
-![Fubber Dashboard Preview](https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop) *(Placeholder: Replace with actual screenshot of your dashboard)*
+![Fubber Dashboard Preview](https://res.cloudinary.com/tbpn17by/image/upload/f_auto,q_auto/ScreenShot_Tool_-20260916215637)
 
 ---
 
@@ -97,7 +97,7 @@ If you are a developer and want to run Fubber locally on your computer:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/fubber.git
+git clone https://github.com/KaveeshaGimsara/fubber.git
 cd fubber
 
 # 2. Install dependencies
@@ -118,13 +118,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 📸 Screenshots
 
 ### Post Creation & Image Editor
-![Create Post](https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+![Create Post](https://res.cloudinary.com/tbpn17by/image/upload/f_auto,q_auto/ScreenShot_Tool_-20260916215351)
 
 ### Advanced Analytics
-![Analytics Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+![Analytics Dashboard](https://res.cloudinary.com/tbpn17by/image/upload/v1789576388/ScreenShot_Tool_-20260916215626.png)
 
-### Scheduling Calendar
-![Scheduling Calendar](https://images.unsplash.com/photo-1506784926709-22f1ec395907?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+### Platforms Working
+![Platforms Working](https://res.cloudinary.com/tbpn17by/image/upload/v1789576400/ScreenShot_Tool_-20260916215648.png)
 
 ---
 
@@ -132,8 +132,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Fubber is an open-source project created to help creators manage their platforms without hefty monthly fees. If you find it useful, please consider supporting the project!
 
-- [Sponsor on GitHub](https://github.com/sponsors/your-username)
-- [Buy me a Coffee](https://ko-fi.com/your-username)
+- [Sponsor on GitHub](https://github.com/sponsors/KaveeshaGimsara)
+- [Buy me a Coffee](https://ko-fi.com/vgmoo_creators)
 - ⭐ Don't forget to **Star** this repository!
 
 ---

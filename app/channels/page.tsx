@@ -394,7 +394,7 @@ export default function ChannelsPage() {
                         )}
                       </div>
                       <span className="text-[10px] text-slate-400 shrink-0">
-                        ID: {acc.platformAccountId.slice(0, 10)}
+                        ID: {acc.platformAccountId?.slice(0, 10) || "Unknown"}
                       </span>
                     </div>
 
