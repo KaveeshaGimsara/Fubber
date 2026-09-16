@@ -32,7 +32,7 @@ export const db = isLiveDb ? drizzle(sql!, { schema }) : null;
 
 /**
  * In-Memory fallback store that persists across API calls during the server lifecycle
- * or when DATABASE_URL is not yet connected. This guarantees that SocialHub runs
+ * or when DATABASE_URL is not yet connected. This guarantees that Fubber runs
  * out-of-the-box locally and on preview deployments.
  */
 class InMemoryDatabase {
@@ -381,11 +381,11 @@ class InMemoryDatabase {
 
 // Global in-memory singleton
 const globalStore = globalThis as unknown as {
-  __socialhub_store?: InMemoryDatabase;
+  __fubber_store?: InMemoryDatabase;
 };
 
-if (!globalStore.__socialhub_store) {
-  globalStore.__socialhub_store = new InMemoryDatabase();
+if (!globalStore.__fubber_store) {
+  globalStore.__fubber_store = new InMemoryDatabase();
 }
 
-export const store = globalStore.__socialhub_store;
+export const store = globalStore.__fubber_store;

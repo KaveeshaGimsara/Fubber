@@ -46,13 +46,13 @@ AUTH_SECRET="your_generated_32_byte_key"
 
 1. When deploying to Vercel, go to the **Storage** tab in your Vercel project dashboard.
 2. Click **Create Database** -> **Blob**.
-3. Name your store (e.g. `socialhub-media`) and click **Create**.
+3. Name your store (e.g. `fubber-media`) and click **Create**.
 4. In the settings, copy the `BLOB_READ_WRITE_TOKEN`.
 5. Set it in `.env.local`:
    ```env
    BLOB_READ_WRITE_TOKEN="vercel_blob_rw_..."
    ```
-*(Note: When developing locally without a token, SocialHub automatically uses local data storage so you can upload images immediately).*
+*(Note: When developing locally without a token, Fubber automatically uses local data storage so you can upload images immediately).*
 
 ---
 
@@ -65,7 +65,7 @@ Both Facebook Page posting and Instagram Content Publishing use the Meta Graph A
 1. Go to [developers.facebook.com](https://developers.facebook.com) and log in.
 2. Click **My Apps** -> **Create App**.
 3. Select **Other** -> **Business** as the app type.
-4. Name your app (e.g. `SocialHub Publisher`).
+4. Name your app (e.g. `Fubber Publisher`).
 5. Under **Add Products to App**, add:
    - **Facebook Login for Business**
    - **Instagram Graph API**
@@ -136,7 +136,7 @@ Both Facebook Page posting and Instagram Content Publishing use the Meta Graph A
 ### Google / YouTube
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com).
-2. Create a project named `SocialHub`.
+2. Create a project named `Fubber`.
 3. Go to **APIs & Services** -> **Library** -> search for **YouTube Data API v3** -> click **Enable**.
 4. Go to **APIs & Services** -> **OAuth consent screen**:
    - User Type: External
@@ -151,14 +151,14 @@ Both Facebook Page posting and Instagram Content Publishing use the Meta Graph A
    GOOGLE_CLIENT_ID="your_google_client_id"
    GOOGLE_CLIENT_SECRET="your_google_client_secret"
    ```
-*(Note: As indicated across SocialHub, Google YouTube Data API v3 does not support third-party creation of Community tab posts. The connection authenticates your channel identity).*
+*(Note: As indicated across Fubber, Google YouTube Data API v3 does not support third-party creation of Community tab posts. The connection authenticates your channel identity).*
 
 ---
 
 ## 5. Summary of `.env.local`
 
 ```env
-DATABASE_URL="postgres://user:password@ep-sample.us-east-2.aws.neon.tech/socialhub?sslmode=require"
+DATABASE_URL="postgres://user:password@ep-sample.us-east-2.aws.neon.tech/fubber?sslmode=require"
 AUTH_SECRET="your_32_byte_secret_key"
 BLOB_READ_WRITE_TOKEN="vercel_blob_rw_..."
 

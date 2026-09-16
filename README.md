@@ -1,78 +1,143 @@
-# SocialHub — Production-Ready Social Media Publishing Dashboard
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/share-2.svg" alt="Fubber Logo" width="80" height="80">
 
-**SocialHub** is a lightweight, personal alternative to Buffer and Metricool built for cross-network **IMAGE + CAPTION** publishing across 6 social networks:
-1. **Facebook Page** (Meta Graph API / Page selector)
-2. **Instagram** (Meta Instagram Graph API / Container publishing)
-3. **Threads** (Official Threads API)
-4. **X (Twitter)** (Official X API v2)
-5. **Pinterest** (Official Pinterest API v5)
-6. **YouTube Community Posts** (Official YouTube Data API v3 with transparent API limitation status)
+  # Fubber
+  
+  **The Ultimate Free & Open-Source Social Media Publishing Dashboard**
 
----
+  <p align="center">
+    <a href="https://vercel.com/new/clone?repository-url=https://github.com/your-username/fubber"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+  </p>
 
-## Features
-
-- **Master Content & Independent Variants**: Upload one high-res image and write a Master Caption. Each platform variant inherits this content and allows completely isolated captions, aspect ratios, and crops.
-- **Precision Image Cropping**: Powered by `react-easy-crop` with presets (`Original`, `1:1`, `4:5`, `16:9`, `1.91:1`, `2:3`, `1:2`), zoom, pan, and rotation. Editing one platform never affects another.
-- **Realistic Platform Previews**: Visual preview cards simulating authentic Facebook, Instagram, Threads, X, Pinterest, and YouTube post layouts.
-- **Independent Multi-Network Publishing**: Before publishing, a "Review & Publish" checklist shows all active platforms. When you click **PUBLISH NOW**, each network executes independently. If one network fails, the others still succeed, and you can retry only the failed networks.
-- **Official API Compliance**: No scraping, no unofficial endpoints, and no automated browser bypasses. For YouTube, the app transparently indicates Google's official limitation regarding third-party Community Post creation.
-- **Drafts & Auto-Save**: Debounced background auto-saving and full draft management (edit, duplicate, delete).
-- **Publishing History**: Track all publications, inspect external post IDs and live URLs, and retry failed posts.
-- **Normalized Analytics**: Cross-platform analytics dashboard using Recharts for engagement over time, platform comparison, and distribution.
-- **Media Library**: Upload, search, sort, inspect dimensions/file sizes, and track post usage across campaigns.
-- **Connected Accounts**: Connect profiles, reconnect expired tokens, and switch target Facebook Pages seamlessly.
-- **Sleek SaaS UI**: Built with Tailwind CSS, Lucide icons, and `next-themes` (Default: Light theme, plus Dark and System options).
+  <p align="center">
+    <a href="https://github.com/sponsors/your-username"><img src="https://img.shields.io/badge/Sponsor-GitHub-%23EA4AAA?style=for-the-badge&logo=github&logoColor=white" alt="Sponsor on GitHub"></a>
+    <a href="https://ko-fi.com/your-username"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"></a>
+  </p>
+</div>
 
 ---
 
-## Tech Stack
+**Fubber** is a beautiful, personal alternative to expensive tools like Buffer and Hootsuite. It allows you to schedule, edit, and publish posts with images across 6 major social networks simultaneously—all from one clean dashboard.
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Database**: Neon Serverless PostgreSQL with Drizzle ORM
-- **Security**: AES-256-GCM encrypted token storage & server-side secrets
-- **Analytics**: Recharts & Normalized Provider Architecture
-- **Cropping**: `react-easy-crop` & HTML5 Canvas
-- **Deployment**: Vercel & Vercel Blob
+1. **Facebook Page**
+2. **Instagram** 
+3. **Threads** 
+4. **X (Twitter)** 
+5. **Pinterest** 
+6. **YouTube Community Posts**
+
+![Fubber Dashboard Preview](https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop) *(Placeholder: Replace with actual screenshot of your dashboard)*
 
 ---
 
-## Getting Started
+## 🌟 Why Fubber?
 
-### 1. Install Dependencies
+- **Completely Free**: Host it yourself on Vercel's free tier. No monthly subscriptions.
+- **Write Once, Customize Everywhere**: Upload one image and write one master caption. You can then individually tweak the caption, crop, and aspect ratio for each specific platform before posting.
+- **Automatic Scheduling**: Pick a future date, time, and timezone. Fubber will automatically publish it for you while you sleep.
+- **Visual Previews**: See exactly what your post will look like on Instagram, X, or Facebook before you hit publish.
+- **Advanced Analytics**: Track your engagement, reach, and follower growth with beautiful charts.
+
+---
+
+## 🚀 How to Install (For Beginners)
+
+You **do not** need to know how to code to use Fubber! You can get this running entirely through your web browser for free. Follow these steps carefully:
+
+### Step 1: Get a Database (Neon)
+Fubber needs a place to save your scheduled posts and settings.
+1. Go to [Neon.tech](https://neon.tech/) and create a free account.
+2. Click **Create Project** and name it "Fubber".
+3. Once created, look for your **Connection String** (it starts with `postgres://...`). Copy this and save it somewhere safe. You will need it soon!
+
+### Step 2: Get Your App Ready (GitHub)
+1. Create a free account on [GitHub.com](https://github.com).
+2. Go to the Fubber code page (where you are reading this).
+3. Click the **Fork** button in the top right corner. This creates a personal copy of Fubber in your own account.
+
+### Step 3: Publish to the Web (Vercel)
+Vercel is a free service that will host your Fubber dashboard so you can access it from anywhere.
+1. Create a free account on [Vercel.com](https://vercel.com).
+2. Click **Add New Project**.
+3. Import the "Fubber" repository you just forked in Step 2.
+4. Before you click Deploy, open the **Environment Variables** section. You need to add a few secret keys:
+   - **Name**: `DATABASE_URL` | **Value**: Paste the Neon link you got in Step 1.
+   - **Name**: `AUTH_SECRET` | **Value**: Make up a random, long password (e.g., `MySuperSecretPassword123!`).
+   - **Name**: `CRON_SECRET` | **Value**: Make up another random password. (This protects your scheduler).
+   - **Name**: `NEXT_PUBLIC_APP_URL` | **Value**: Your Vercel website URL (you can add this later once Vercel gives you your `.vercel.app` link).
+5. Click **Deploy**. Wait a couple of minutes for it to finish!
+
+### Step 4: Setup Image Storage (Vercel Blob)
+Your app is live, but it needs a place to store the photos you upload.
+1. In your Vercel Dashboard, go to your new Fubber project.
+2. Click on the **Storage** tab at the top.
+3. Click **Create Database** -> **Blob** -> Name it "fubber-media" and click **Create**.
+4. Once created, scroll down to find the `BLOB_READ_WRITE_TOKEN`.
+5. Go back to your project **Settings** -> **Environment Variables**, and add:
+   - **Name**: `BLOB_READ_WRITE_TOKEN` | **Value**: Paste the token here.
+6. Go to the **Deployments** tab and click **Redeploy** to apply the new image storage.
+
+🎉 **You're done!** You can now visit your Vercel link and start using Fubber.
+
+---
+
+## 🔑 Connecting Your Social Accounts (API Keys)
+
+To allow Fubber to post on your behalf, you need to connect your social media accounts by getting "API Keys" from Facebook, X (Twitter), etc. 
+
+👉 **[Read the Full API Setup Guide Here](./API_SETUP_GUIDE.md)**
+
+*(This guide walks you step-by-step through how to get the free developer keys for Meta, Google, X, and Pinterest).*
+
+---
+
+## 💻 For Developers (Local Setup)
+
+If you are a developer and want to run Fubber locally on your computer:
+
 ```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/fubber.git
+cd fubber
+
+# 2. Install dependencies
 npm install
-```
 
-### 2. Configure Environment Variables
-Copy `.env.example` to `.env.local` and set your credentials:
-```bash
+# 3. Setup environment variables
 cp .env.example .env.local
-```
+# (Fill in your .env.local with your database and API credentials)
 
-### 3. Run Development Server
-```bash
+# 4. Run the development server
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 4. Build for Production
-```bash
-npm run build
-npm start
-```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## Deploy to Vercel
+## 📸 Screenshots
 
-1. Push your repository to GitHub.
-2. Import the repository into **Vercel**.
-3. In the Vercel project settings, add the environment variables from `.env.example`:
-   - `DATABASE_URL` (from Neon Console)
-   - `AUTH_SECRET` (generate with `openssl rand -base64 32`)
-   - `BLOB_READ_WRITE_TOKEN` (from Vercel Storage tab)
-   - Platform client IDs and secrets
-4. Deploy!
+### Post Creation & Image Editor
+![Create Post](https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+
+### Advanced Analytics
+![Analytics Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+
+### Scheduling Calendar
+![Scheduling Calendar](https://images.unsplash.com/photo-1506784926709-22f1ec395907?q=80&w=1000&auto=format&fit=crop) *(Placeholder)*
+
+---
+
+## ❤️ Support & Sponsor
+
+Fubber is an open-source project created to help creators manage their platforms without hefty monthly fees. If you find it useful, please consider supporting the project!
+
+- [Sponsor on GitHub](https://github.com/sponsors/your-username)
+- [Buy me a Coffee](https://ko-fi.com/your-username)
+- ⭐ Don't forget to **Star** this repository!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
